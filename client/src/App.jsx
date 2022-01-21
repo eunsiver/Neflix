@@ -11,9 +11,7 @@ const App = () => {
     return (
         <BrowserRouter>
             <Routes>
-                <Route exact path="/">
-                    {user ? <Home /> : <Navigate to="/register" replace={true}/>}
-                </Route>
+                <Route  path="/" element={user? <Home/>:<Navigate to="/register"/>}/>
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/movies" element={<Home type="movies" />} />
