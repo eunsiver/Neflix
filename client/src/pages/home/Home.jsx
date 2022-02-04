@@ -11,18 +11,18 @@ const Home = ({ type }) => {
         const getRandomLists = async () => {
             try {
                 const res = await axios.get(
-                    `lists${type ? "?type=" + type : ""}&${
+                    `lists${type ? "?type=" + type : ""}${
                         genre ? "&genre=" + genre : ""
                     }`,
                     {
                         headers: {
-                            token: "Bearer yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZWE4MTM0MzFhYWNjYjYyOTM3YTc0MCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0Mjc4MjMxOSwiZXhwIjoxNjQzMjE0MzE5fQ.tMXnWvlmBD1coqdaOFHciibMIcqKkL70bXCSAIFAZtk",
+                            token: "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZWE4MTM0MzFhYWNjYjYyOTM3YTc0MCIsImlzQWRtaW4iOnRydWUsImlhdCI6MTY0Mzk4MzcwOCwiZXhwIjoxNjQ0NDE1NzA4fQ.TCbc-Q6AOa7rqLjSgF3Z9vS-kBVlCE_lDmBp9XOAG-o",
                         },
                     }
                 );
                 setLists(res.data);
             } catch (err) {
-                console.log(err);
+                console.log("왜안돼");
             }
         };
         getRandomLists();

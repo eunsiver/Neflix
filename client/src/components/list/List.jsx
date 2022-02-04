@@ -38,6 +38,7 @@ export default function List({ list }) {
                     {list.content.map((item, i) => (
                         <ListItem index={i} item={item}/>
                     ))}
+                    {/* 2.:03:55 */}
                 </div>
                 <ArrowForwardIosOutlined
                     className="sliderArrow right"
